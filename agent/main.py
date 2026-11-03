@@ -12,8 +12,7 @@ from fastapi.responses import FileResponse  # noqa: E402
 from fastapi.staticfiles import StaticFiles  # noqa: E402
 from pydantic import BaseModel  # noqa: E402
 
-from pipeline import BASE_IMAGE, OUTPUT_DIR, AgentError, generate, list_assets  # noqa: E402
-from prompts import FOLDER_DESC  # noqa: E402
+from pipeline import BASE_IMAGE, OUTPUT_DIR, AgentError, generate  # noqa: E402
 
 app = FastAPI(title="도달쑤 × 서문시장")
 OUTPUT_DIR.mkdir(exist_ok=True)
@@ -32,11 +31,6 @@ def index():
 @app.get("/base.png")
 def base_image():
     return FileResponse(BASE_IMAGE)
-
-
-@app.get("/api/assets")
-def api_assets():
-    return [{"folder": f, "label": FOLDER_DESC[f], "names": list(items)} for f, items in list_assets().items()]
 
 
 @app.post("/api/generate")

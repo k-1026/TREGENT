@@ -55,11 +55,6 @@
     <p class="status" id="status"></p>
   </div>
 
-  <details class="card" style="margin-top:16px" id="assets">
-    <summary><b>등록된 에셋</b> <span id="asset-count"></span></summary>
-    <div class="meta" id="asset-list"></div>
-  </details>
-
   <div class="grid" style="margin-top:16px">
     <div class="card">
       <h2>원형 (고정)</h2>
@@ -87,13 +82,6 @@
       URL.revokeObjectURL(a.href);
     }, 'image/png');
   }
-  fetch('/api/assets').then((r) => r.json()).then((groups) => {
-    const total = groups.reduce((n, g) => n + g.names.length, 0);
-    $('asset-count').textContent = total ? `${total}개` : '— 아직 없어요. agent/assets 폴더에 그림을 넣어 주세요.';
-    $('asset-list').innerHTML = groups.map((g) =>
-      `<div><b>${g.label}</b> (assets/${g.folder}) ${g.names.length ? g.names.join(', ').replace(/[&<>"]/g, '') : '-'}</div>`).join('');
-  });
-
   document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => { $('text').value = c.textContent; }));
 
   $('go').addEventListener('click', async () => {
@@ -114,8 +102,7 @@
       const esc = (s) => String(s).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
       $('meta').innerHTML = `
         <div><b>장면</b> ${esc(data.scene_ko)}</div>
-        <div><b>사용한 에셋</b> ${esc(data.elements.join(', ') || '-')}</div>
-        ${data.missing.length ? `<div class="warn"><b>에셋이 없어 못 넣은 것</b> ${esc(data.missing.join(', '))}</div>` : ''}
+        <div><b>서문시장 요소</b> ${esc(data.elements.join(', ') || '-')}</div>
         ${data.removed.length ? `<div><b>뺀 요소</b> ${esc(data.removed.join(', '))}</div>` : ''}
         <div class="ok"><b>원형</b> 픽셀 그대로 사용 · 얼굴은 소품이 덮지 못하게 보호</div>
         <a class="dl" href="#" id="dl-png">PNG로 내려받기</a> · <a class="dl" href="${data.image_url}" download>SVG로 내려받기</a>`;
