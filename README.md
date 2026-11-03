@@ -3,6 +3,8 @@
 대구를 대표하는 음식 **대구 10미(味)** 를 귀여운 노란 캐릭터와 함께 소개하는 콜라보 일러스트 프로젝트입니다.
 각 캐릭터는 음식의 특징을 살린 소품과 의상을 착용하고 있습니다.
 
+📊 **팀 발표 자료:** [발표자료.md](발표자료.md) · [PPT 내려받기](files/TREGENT-팀-프로젝트.pptx)
+
 <p align="center">
   <img src="images/daegu-10mi-collab.webp" alt="대구 10미 × 캐릭터 콜라보" width="600">
 </p>
@@ -45,6 +47,11 @@
 ```
 .
 ├── README.md
+├── 발표자료.md
+├── files/
+│   └── TREGENT-팀-프로젝트.pptx
 └── images/
-    └── daegu-10mi-collab.webp
+    ├── daegu-10mi-collab.webp
+    ├── dodalssu-basic.png
+    └── dodalssu-cover.png
 ```
