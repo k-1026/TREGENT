@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1145 1374">
+  <!-- 수성못: 낮 하늘, 먼 산, 넓은 호수와 오리배, 버드나무, 가로등, 나무 데크 -->
+  <rect width="1145" height="1374" fill="#bfe6ff"/>
+  <g fill="#fff" stroke="#111" stroke-width="8" stroke-linejoin="round">
+    <path d="M70 200 q 0 -50 55 -50 q 15 -45 70 -35 q 45 -20 70 25 q 50 0 45 60 Z"/>
+    <path d="M820 140 q 0 -45 50 -45 q 18 -40 65 -30 q 40 -15 62 22 q 45 0 40 53 Z"/>
+  </g>
+
+  <!-- 먼 산 -->
+  <path d="M-20 560 Q 140 380 320 500 Q 470 400 620 480 Q 800 360 960 470 Q 1060 420 1170 500 L1170 640 L-20 640 Z"
+        fill="#8fcf8a" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M-20 600 Q 200 500 400 590 Q 600 520 780 600 Q 960 530 1170 590 L1170 650 L-20 650 Z"
+        fill="#6cbb72" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+
+  <!-- 호수 -->
+  <rect x="-10" y="640" width="1165" height="560" fill="#4aa3df" stroke="#111" stroke-width="8"/>
+  <g stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.6" fill="none">
+    <path d="M60 720 q 30 -12 60 0"/><path d="M300 700 q 30 -12 60 0"/><path d="M800 710 q 30 -12 60 0"/>
+    <path d="M980 760 q 30 -12 60 0"/><path d="M120 860 q 30 -12 60 0"/><path d="M420 820 q 30 -12 60 0"/>
+    <path d="M700 850 q 30 -12 60 0"/><path d="M60 1000 q 30 -12 60 0"/><path d="M960 980 q 30 -12 60 0"/>
+    <path d="M330 960 q 30 -12 60 0"/><path d="M780 1060 q 30 -12 60 0"/>
+  </g>
+
+  <!-- 오리배 (먼 것 작게, 가까운 것 크게) -->
+  <g stroke="#111" stroke-width="7" stroke-linejoin="round">
+    <g transform="translate(250 700) scale(0.6)">
+      <path d="M-90 30 Q -100 -10 -60 -10 L 60 -10 Q 100 -10 95 30 Q 90 60 0 60 Q -85 60 -90 30 Z" fill="#fff"/>
+      <path d="M40 -10 Q 40 -70 75 -75 Q 110 -78 108 -45 Q 106 -20 80 -10 Z" fill="#fff"/>
+      <path d="M106 -52 L 135 -44 L 106 -36 Z" fill="#f59b2e"/>
+      <circle cx="88" cy="-52" r="6" fill="#111"/>
+      <rect x="-45" y="-45" width="70" height="38" rx="10" fill="#ff8fb1"/>
+    </g>
+    <g transform="translate(860 760) scale(-0.75 0.75)">
+      <path d="M-90 30 Q -100 -10 -60 -10 L 60 -10 Q 100 -10 95 30 Q 90 60 0 60 Q -85 60 -90 30 Z" fill="#fff"/>
+      <path d="M40 -10 Q 40 -70 75 -75 Q 110 -78 108 -45 Q 106 -20 80 -10 Z" fill="#fff"/>
+      <path d="M106 -52 L 135 -44 L 106 -36 Z" fill="#f59b2e"/>
+      <circle cx="88" cy="-52" r="6" fill="#111"/>
+      <rect x="-45" y="-45" width="70" height="38" rx="10" fill="#7fd0ff"/>
+    </g>
+    <g transform="translate(560 690) scale(0.45)">
+      <path d="M-90 30 Q -100 -10 -60 -10 L 60 -10 Q 100 -10 95 30 Q 90 60 0 60 Q -85 60 -90 30 Z" fill="#fff"/>
+      <path d="M40 -10 Q 40 -70 75 -75 Q 110 -78 108 -45 Q 106 -20 80 -10 Z" fill="#fff"/>
+      <path d="M106 -52 L 135 -44 L 106 -36 Z" fill="#f59b2e"/>
+      <rect x="-45" y="-45" width="70" height="38" rx="10" fill="#b8f08c"/>
+    </g>
+  </g>
+  <g fill="#fff" opacity="0.45">
+    <ellipse cx="250" cy="745" rx="70" ry="8"/><ellipse cx="860" cy="815" rx="85" ry="9"/>
+  </g>
+
+  <!-- 버드나무 (양옆) -->
+  <g stroke="#111" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M80 1200 L 95 640" stroke-width="30" stroke="#111"/>
+    <path d="M80 1200 L 95 640" stroke-width="14" stroke="#8a5a34"/>
+    <path d="M1070 1200 L 1055 620" stroke-width="30" stroke="#111"/>
+    <path d="M1070 1200 L 1055 620" stroke-width="14" stroke="#8a5a34"/>
+    <ellipse cx="95" cy="560" rx="150" ry="120" fill="#7fcf6f"/>
+    <ellipse cx="1055" cy="540" rx="150" ry="120" fill="#7fcf6f"/>
+  </g>
+  <g fill="none" stroke="#4f9e4a" stroke-width="8" stroke-linecap="round">
+    <path d="M10 600 q 10 120 0 230"/><path d="M50 620 q 12 140 -4 260"/><path d="M140 620 q 10 130 0 240"/>
+    <path d="M190 600 q 8 110 -2 200"/><path d="M965 600 q -8 110 2 210"/><path d="M1010 620 q -12 140 4 260"/>
+    <path d="M1100 620 q -10 130 0 240"/><path d="M1140 600 q -8 110 2 200"/>
+  </g>
+
+  <!-- 가로등 -->
+  <g stroke="#111" stroke-width="8" stroke-linejoin="round">
+    <rect x="232" y="860" width="18" height="340" fill="#4a4f63"/>
+    <path d="M210 860 L 272 860 L 262 810 L 220 810 Z" fill="#ffe08a"/>
+    <rect x="895" y="860" width="18" height="340" fill="#4a4f63"/>
+    <path d="M873 860 L 935 860 L 925 810 L 883 810 Z" fill="#ffe08a"/>
+  </g>
+
+  <!-- 나무 데크와 난간 -->
+  <rect x="-10" y="1180" width="1165" height="200" fill="#d89a5b" stroke="#111" stroke-width="8"/>
+  <g stroke="#a86a33" stroke-width="6">
+    <line x1="0" y1="1230" x2="1145" y2="1230"/><line x1="0" y1="1285" x2="1145" y2="1285"/>
+    <line x1="0" y1="1340" x2="1145" y2="1340"/>
+  </g>
+  <g stroke="#111" stroke-width="8" fill="#c7864a" stroke-linejoin="round">
+    <rect x="-10" y="1110" width="1165" height="22"/>
+    <rect x="30" y="1110" width="20" height="80"/><rect x="200" y="1110" width="20" height="80"/>
+    <rect x="370" y="1110" width="20" height="80"/><rect x="755" y="1110" width="20" height="80"/>
+    <rect x="925" y="1110" width="20" height="80"/><rect x="1095" y="1110" width="20" height="80"/>
+  </g>
+  <ellipse cx="572" cy="1315" rx="420" ry="50" fill="#000" fill-opacity="0.15"/>
+</svg>

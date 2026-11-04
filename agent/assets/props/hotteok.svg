@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.9">
+    <path d="M120 70 q -14 -18 0 -36 q 14 -18 0 -30"/><path d="M180 70 q -14 -18 0 -36 q 14 -18 0 -30"/>
+  </g>
+  <g stroke="#111" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M60 150 Q 60 75 150 75 Q 240 75 240 150 Z" fill="#e9a23b"/>
+    <path d="M88 150 Q 92 108 150 108 Q 208 108 212 150 Z" fill="#8a4b1e" stroke-width="8"/>
+    <path d="M70 140 L 230 140 L 205 285 L 95 285 Z" fill="#fff"/>
+  </g>
+  <path d="M79 188 L 221 188 L 216 216 L 84 216 Z" fill="#e8534a"/>
+  <path d="M70 140 L 230 140 L 205 285 L 95 285 Z" fill="none" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+  <g fill="#f4d38c" stroke="#111" stroke-width="3">
+    <ellipse cx="120" cy="128" rx="9" ry="6"/><ellipse cx="150" cy="120" rx="9" ry="6"/><ellipse cx="180" cy="129" rx="9" ry="6"/>
+    <ellipse cx="135" cy="140" rx="7" ry="5"/><ellipse cx="166" cy="141" rx="7" ry="5"/>
+  </g>
+  <path d="M92 100 q 20 -14 45 -16" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+</svg>

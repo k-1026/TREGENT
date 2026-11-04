@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>도달쑤 × 서문시장</title>
+<title>도달쑤 × 대구</title>
 <style>
   :root {
     --bg: #fffaf0; --card: #ffffff; --ink: #2b2420; --muted: #7a6d63;
@@ -40,16 +40,18 @@
 </head>
 <body>
 <main>
-  <h1>도달쑤 × 서문시장</h1>
-  <p class="sub">장면을 적으면, 원형 도달쑤가 서문시장을 즐기는 그림을 만들어요.</p>
+  <h1>도달쑤 × 대구</h1>
+  <p class="sub">대구 관광지와 장면을 적으면, 원형 도달쑤가 그곳을 즐기는 그림을 만들어요. 관광지를 안 적으면 서문시장으로 그려요.</p>
 
   <div class="card">
-    <textarea id="text" placeholder="예) 서문시장 야시장에서 씨앗호떡을 먹으며 신난 도달쑤"></textarea>
+    <textarea id="text" placeholder="예) 수성못에서 오리배 타며 아이스크림 먹는 도달쑤"></textarea>
     <div class="chips">
-      <button class="chip">야시장 노점에서 꼬치를 즐기는 도달쑤</button>
-      <button class="chip">원단 가게에서 한복 천을 망토처럼 두른 도달쑤</button>
-      <button class="chip">칼국수와 납작만두를 양손에 든 도달쑤</button>
-      <button class="chip">장바구니 들고 장 보는 도달쑤</button>
+      <button class="chip">서문시장 야시장에서 씨앗호떡 먹는 도달쑤</button>
+      <button class="chip">김광석다시그리기길에서 통기타 치는 도달쑤</button>
+      <button class="chip">수성못에서 오리배 구경하는 도달쑤</button>
+      <button class="chip">근대골목 계산성당 앞에서 사진 찍는 도달쑤</button>
+      <button class="chip">이월드에서 솜사탕 든 도달쑤</button>
+      <button class="chip">팔공산 단풍 등산하는 도달쑤</button>
     </div>
     <button class="go" id="go">그림 만들기</button>
     <p class="status" id="status"></p>
@@ -88,7 +90,7 @@
     const text = $('text').value.trim();
     if (!text) { $('status').textContent = '그리고 싶은 장면을 적어 주세요.'; return; }
     $('go').disabled = true;
-    $('status').textContent = '서문시장 배경과 소품을 그리는 중이에요. 30초~1분 걸릴 수 있어요.';
+    $('status').textContent = '관광지 배경과 소품을 그리는 중이에요. 30초~1분 걸릴 수 있어요.';
     $('meta').innerHTML = '';
     try {
       const res = await fetch('/api/generate', {
@@ -102,9 +104,12 @@
       const esc = (s) => String(s).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
       $('meta').innerHTML = `
         <div><b>장면</b> ${esc(data.scene_ko)}</div>
-        <div><b>서문시장 요소</b> ${esc(data.elements.join(', ') || '-')}</div>
+        <div><b>관광지</b> ${esc(data.spot || '-')}${data.spot_known ? '' : ' <span class="warn">(사전에 없는 곳이라 실제 모습과 다를 수 있어요)</span>'}${data.spot_drawn ? ' <span class="warn">(준비된 배경이 없어 Gemini가 그린 배경)</span>' : ''}</div>
+        <div><b>포즈</b> ${esc(data.pose)}</div>
+        <div><b>소품</b> ${esc(data.elements.join(', ') || '-')}</div>
+        ${data.missing.length ? `<div class="warn"><b>준비된 소품이 없어 못 넣은 것</b> ${esc(data.missing.join(', '))}</div>` : ''}
         ${data.removed.length ? `<div><b>뺀 요소</b> ${esc(data.removed.join(', '))}</div>` : ''}
-        <div class="ok"><b>원형</b> 픽셀 그대로 사용 · 얼굴은 소품이 덮지 못하게 보호</div>
+        <div class="ok"><b>원형</b> 얼굴·몸은 원형 그대로, 포즈에 따라 팔만 바뀜</div>
         <a class="dl" href="#" id="dl-png">PNG로 내려받기</a> · <a class="dl" href="${data.image_url}" download>SVG로 내려받기</a>`;
       $('dl-png').addEventListener('click', (ev) => { ev.preventDefault(); downloadPng(img); });
       $('status').textContent = '';

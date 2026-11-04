@@ -1,4 +1,4 @@
-"""도달쑤 × 서문시장 그림 에이전트 웹 서버. 실행: python -m uvicorn main:app (agent 폴더에서)"""
+"""도달쑤 × 대구 관광지 그림 에이전트 웹 서버. 실행: python -m uvicorn main:app (agent 폴더에서)"""
 
 from pathlib import Path
 
@@ -14,7 +14,7 @@ from pydantic import BaseModel  # noqa: E402
 
 from pipeline import BASE_IMAGE, OUTPUT_DIR, AgentError, generate  # noqa: E402
 
-app = FastAPI(title="도달쑤 × 서문시장")
+app = FastAPI(title="도달쑤 × 대구")
 OUTPUT_DIR.mkdir(exist_ok=True)
 app.mount("/outputs", StaticFiles(directory=OUTPUT_DIR), name="outputs")
 
